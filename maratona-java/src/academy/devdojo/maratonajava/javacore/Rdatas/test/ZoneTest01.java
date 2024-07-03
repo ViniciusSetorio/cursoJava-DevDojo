@@ -1,5 +1,6 @@
 package academy.devdojo.maratonajava.javacore.Rdatas.test;
 import java.time.*;
+import java.time.chrono.JapaneseDate;
 import java.util.Map;
 
 public class ZoneTest01 {
@@ -32,6 +33,10 @@ public class ZoneTest01 {
         OffsetDateTime offsetDateTime3 = nowInstant.atOffset(offsetManaus);
         System.out.println(offsetDateTime3);
 
-
+        JapaneseDate japaneseDate = JapaneseDate.from(LocalDate.now());
+        System.out.println(japaneseDate);
+        LocalDate meijiEraLocalDate = LocalDate.of(1900, 2, 1);
+        JapaneseDate meijiEra = JapaneseDate.from(meijiEraLocalDate);
+        System.out.println(meijiEra);
     }
 }
